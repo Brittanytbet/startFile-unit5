@@ -1,0 +1,275 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+#theButton::before {
+    content: "\2630";
+}
+#theButton {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+#theNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li a {
+        color: $primaryColor;
+        display: block;
+        padding: .75rem $gutter;
+        text-decoration: none;
+        border-bottom: 1px solid $greyColor;
+    }
+    li.active.a {
+        color: $secondaryColor;
+    }
+}
+
+/* CSS for the open class */
+#theButton.open::before {
+    content: "\2715";
+}
+
+#theNav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+    ul {
+        overflow: hidden;
+    }
+}
+
+#theNav.open {
+    grid-template-rows: 1fr;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+.mainHero {
+    border: none;
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    p {
+        position: absolute;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        bottom: 1rem;
+        right: 1rem;
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+h1 {background-color: neonPink;
+    margin: 0;
+}
+
+/* --------------------------- SERVICE CARDS --------------------------- */
+#serviceWrapper {
+    padding: 2rem $gutter;
+}
+
+.serviceSection {
+    h2 {
+        font-size: 1.8rem;
+        font-weight: $lightWeight;
+        color: #333;
+        margin: 0 0 0.5rem 0;
+    }
+    > p {
+        color: #333;
+        line-height: $leading;
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid $greyColor;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        transform: translateY(-4px);
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+        font-weight: $normalWeight;
+        color: #333;
+        margin: 0 0 0.75rem 0;
+    }
+    p {
+        color: #333;
+        line-height: $leading;
+        flex-grow: 1;
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.card img:hover {
+    animation: pulse 250ms ease-in-out 1;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3a5c2c;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: $normalWeight;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* --------------------------- REVIEWS --------------------------- */
+#reviewsWrapper {
+    background-color: #f0f0ec;
+    padding: 2rem $gutter;
+}
+
+.reviewsSection {
+    h2 {
+        font-size: 1.8rem;
+        font-weight: $lightWeight;
+        color: #333;
+        text-align: center;
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+.reviewsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.review {
+    h3 {
+        font-size: 1rem;
+        font-weight: $normalWeight;
+        color: #333;
+        margin: 0 0 0.25rem 0;
+    }
+    .stars {
+        color: #c9a800;
+        font-size: 1rem;
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+    }
+    p {
+        color: #333;
+        line-height: $leading;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Navigation Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+
+<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+
+<!-- Fav Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+</head>
+
+<body>
+<div id="headerWrapper">
+	<header>
+        <img src="images/logo.png" alt="logo">
+		<span>The Car Hut</span>
+	</header>
+</div><!-- end header wrapper -->
+
+    
+    
+<div id="navWrapper">
+    <nav id="theNav">
+        <button id="theButton"></button>
+        <ul>
+            <li><a href="#">Cars</a></li>
+            <li><a href="#">Sports Cars</a></li>
+            <li class="active"><a href="#">All Cars</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+<div id="mainWrapper">
+    <main>
+        <div class="mainHero">
+            <img src="images/hyundai-kona.webp" width="1200" height="500" alt="hero image">
+            <p> This is my car!</p>
+        </div>
+
+        <div id="serviceWrapper">
+            <section class="serviceSection">
+                <h2>Service</h2>
+                <p>Vehicle servicing is one of the most important aspects of owning a vehicle! Auto servicing is vital in maintaining your fuel efficiency, dependability, drive-ability and help to increase the overall lifespan of your vehicle. Come in today for your recommended service and free inspection of all your vehicles moving pieces!</p>
+                <div class="cardContainer">
+                    <div class="card">
+                        <img src="images/car-outline.svg" alt="Car Icon">
+                        <h3>The Cool Car Brand</h3>
+                        <p>Discover the latest innovations and features from our premium car brand.</p>
+                        <a href="#" class="btn">LEARN MORE</a>
+                    </div>
+                    <div class="card">
+                        <img src="images/hyudai-logo-handmade.svg" alt="Hyundai Logo">
+                        <h3>Hyundai</h3>
+                        <p>Hyundai cars are super cool and there are lots of cool features that they have.</p>
+                        <a href="#" class="btn">LEARN MORE</a>
+                    </div>
+                    <div class="card">
+                        <img src="images/car-sport-outline.svg" alt="Sports Car icon">
+                        <h3>Sports Car</h3>
+                        <p>Get the coolest sports car on the market with the latest features and technology.</p>
+                        <a href="#" class="btn">LEARN MORE</a>
+                    </div>
+                    <div class="card">
+                        <img src="images/toyota-logo-handmade.svg" alt="Toyota Logo">
+                        <h3>Toyota</h3>
+                        <p>Toyota cars are known for their reliability and durability.</p>
+                        <a href="#" class="btn">LEARN MORE</a>
+                    </div>
+                </div>
+            </section>
+        </div><!-- end service wrapper -->
+
+        <div id="reviewsWrapper">
+            <section class="reviewsSection">
+                <h2>What our Customers Say</h2>
+                <div class="reviewsContainer" id="reviewsContainer"></div>
+            </section>
+        </div><!-- end reviews wrapper -->
+
+    </main>
+</div><!-- end main wrapper -->
+    
+<div id="footerWrapper">
+    <footer>
+        <p>Copyright &copy; Brittany Thompson &bull; 2025 Design Thinking Inc. All rights reserved. 
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
+    </footer>
+</div> <!-- end footer wrapper -->
+<script src="js/scripts.js" type="module"></script>
+</body>
+</html> 

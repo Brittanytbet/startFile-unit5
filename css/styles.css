@@ -326,16 +326,40 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 50px auto;
-  column-gap: 10px;
+  display: flex;
   align-items: center;
   padding: 0.5rem 10px;
+  position: relative;
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.header-brand img {
+  width: 50px;
 }
 header span {
   font-size: 1.6rem;
   font-weight: 300;
   color: #1d295f;
+}
+header .phone-number {
+  display: none;
+}
+.phone-mobile {
+  display: block;
+  text-align: right;
+  padding: 0.3rem 10px;
+  color: #1d295f;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  cursor: default;
+}
+.phone-mobile:hover {
+  text-decoration: underline;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
@@ -484,11 +508,16 @@ h1 {
 }
 
 @keyframes pulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
 .card img:hover {
   animation: pulse 250ms ease-in-out 1;
 }
@@ -561,6 +590,7 @@ footer a {
 }
 
 @media only screen and (min-width: 35rem) {
+  /* NAVIGATION STUFF GOES HERE  */
   /* CARDS */
   .cardContainer {
     grid-template-columns: 1fr 1fr;
@@ -594,6 +624,23 @@ footer a {
   }
   #navWrapper {
     border-bottom: 1px solid #ccc;
+  }
+  .phone-mobile {
+    display: none;
+  }
+  header .phone-number {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1d295f;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: default;
+  }
+  header .phone-number:hover {
+    text-decoration: underline;
   }
   /* CARDS */
   .cardContainer {

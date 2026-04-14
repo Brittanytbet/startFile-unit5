@@ -326,16 +326,26 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 50px auto;
-  column-gap: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem 10px;
 }
-header span {
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-brand span {
   font-size: 1.6rem;
   font-weight: 300;
   color: #1d295f;
+}
+
+/* hide header phone on mobile — shown in nav instead */
+.phone-number {
+  display: none;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
@@ -368,8 +378,9 @@ header span {
   text-decoration: none;
   border-bottom: 1px solid #ccc;
 }
-#theNav ul li.active.a {
-  color: #7c1d47;
+#theNav ul li.active a {
+  color: #ffffff;
+  background-color: #1d295f;
 }
 
 /* CSS for the open class */
@@ -583,6 +594,13 @@ footer a {
   }
   /* NAVIGATION STUFF GOES HERE  */
   #theButton {
+    display: none;
+  }
+  /* show header phone, hide nav phone on large screens */
+  .phone-number {
+    display: block;
+  }
+  .phone-mobile {
     display: none;
   }
   #theNav {

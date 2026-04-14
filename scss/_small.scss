@@ -23,18 +23,25 @@ body {
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {border-bottom: 1px solid $greyColor;}
 header {
-    display: grid;
-    grid-template-columns: 50px auto;
-    column-gap: $gutter;
-    align-items: center; //vertically
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: .5rem $gutter;
+} // end header
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: $gutter;
     span {
         font-size: 1.6rem;
         font-weight: $lightWeight;
         color: $primaryColor;
     }
-} // end header
+} // end header-brand
 
+
+/* hide header phone on mobile — shown in nav instead */
+.phone-number { display: none; }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 

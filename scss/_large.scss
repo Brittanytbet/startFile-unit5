@@ -8,6 +8,10 @@ header, nav, main {
     display: none;
 }
 
+/* show header phone, hide nav phone on large screens */
+.phone-number { display: block; }
+.phone-mobile { display: none; }
+
 #theNav {
     grid-template-rows: 1fr;
 }

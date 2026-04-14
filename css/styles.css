@@ -392,8 +392,9 @@ header .phone-number {
   text-decoration: none;
   border-bottom: 1px solid #ccc;
 }
-#theNav ul li.active.a {
-  color: #7c1d47;
+#theNav ul li.active a {
+  color: #ffffff;
+  background-color: #1d295f;
 }
 
 /* CSS for the open class */
